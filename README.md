@@ -12,7 +12,7 @@ REDIRECT_URI=[your_redirect_url]
 CLIENT_ID=[your client id]
 CLIENT_SECRET=[your client secret]
 ```
-4) Run 'npm inntsall'
+4) Run 'npm innstall'
 ```
 cd client && npm install
 cd server && npm install
