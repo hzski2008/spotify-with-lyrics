@@ -1,0 +1,48 @@
+<div class="login-screen">
+  <div class="login-bg">
+    <div class="login-panel">
+      <form #login="ngForm" ngNativeValidate (ngSubmit)="onSubmit(login.value)">
+        <!-- The upper 1/3 of gray area -->
+        <div class="panel-heading">
+          <span translate>Log in to your account</span>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="userName" translate>Username</label><label>:</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <mat-icon>perm_identity</mat-icon>
+              </span>
+              <input type="text" id="userName" name="userName" ngModel class="form-control" autocorrect="off"
+                autocapitalize="off" #userNameInput required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Password</label><label>:</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <mat-icon>key</mat-icon>
+              </span>
+              <input type="password" id="userPassword" name="userPassword" ngModel class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="submit-panel">
+          <button mat-button id="SignIn" type="submit"
+            class="mat-raised-button mat-primary btn-block login-button qc-center-horizontally md-entice-theme">
+            <span>Log in</span>
+          </button>
+          <button mat-button id="SSOSignIn" type="button"
+            class="mat-raised-button mat-primary btn-block login-button qc-center-horizontally md-entice-theme"
+            (click)="auth.login()">
+            <img class="spotify-logo" src="assets/images/Spotify_Logo_RGB_White.png" alt="spotify logo" />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<ejs-dialog id="dialog" #ejDialog header="Dialog" isModal="true" [visible]="false" width="430px" height="150px"
+  [zIndex]="1033" [showCloseIcon]="false" [enableResize]="true" [allowDragging]="true"
+  content='Log in through username/password is not supported yet!' [buttons]='buttons'>
+</ejs-dialog>

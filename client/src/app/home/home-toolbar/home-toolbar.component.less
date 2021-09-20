@@ -1,0 +1,89 @@
+@import "../../../style-params";
+
+#mainToolbar {
+  font-size       : 16px;
+  background-color: @color-primary-main;
+  padding-right   : 0.8rem;
+  border-width    : 0;
+
+  &.qc-preview {
+    background-color: @color-gray-600;
+  }
+
+  .qc_navbar_content {
+    height : @navbar-height;
+    display: flex;
+  }
+
+  #dotsMenuToggle {
+    background-color: fade(@color-white, 0%);
+
+    &:hover,
+    &:focus {
+      background-color: fade(@color-white, 24%);
+    }
+  }
+
+  .qc-save-button-wrapper {
+    margin-top : 1.45rem;
+    margin-left: 1.2rem;
+  }
+
+  #saveNavbarButton {
+    text-align: center;
+    &.qc-save-tick {
+      padding-top : 0.5rem;
+      padding-left: 20px;
+    }
+  }
+}
+
+.qc-navbar {
+  width          : 100%;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  height       : @navbar-height  !important;
+  box-shadow   : 0 0 0.5rem 0 rgba(0, 0, 0, 1);
+  margin-bottom: 0px !important;
+  position     : relative !important;
+}
+
+.qc-navbar-fixed-top {
+  top     : 0;
+  position: fixed;
+  right   : 0;
+  left    : 0;
+}
+
+.qc-navbar-default {
+  border-color: #eeeeee;
+}
+
+.avatar {
+  height             : 50px;
+  width              : 50px;
+  background-size    : cover;
+  background-position: 50%;
+  display            : inline-block;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.user-info {
+  border-width    : 0px;
+  background-color: @color-primary-main;
+  padding-left    : 20px;
+}
+
+.user-info-section {
+  margin          : 0px 20px 10px 20px;
+  padding         : 10px;
+  border-radius   : 5px;
+  background-color: #0D87DB12;
+  line-height     : 22px;
+  font-size       : 14px;
+  line-height     : 19px;
+}

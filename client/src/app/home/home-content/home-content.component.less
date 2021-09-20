@@ -1,0 +1,57 @@
+.pane-body-right {
+  height     : ~"calc(100% - 5.2rem)";
+  padding-top: 4rem;
+}
+
+.container {
+  text-align: center;
+
+  .blink {
+    animation  : blinker 1s linear infinite;
+    color      : #ff0000;
+    font-weight: bold;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  display           : flex;
+  height            : 81vh;
+  width             :84vw;
+}
+
+.content-left {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  padding-left   : 15%;
+}
+
+.content-left-header {
+  font-size     : 22px;
+  font-weight   : bold;
+  white-space   : nowrap;
+  letter-spacing: 2px;
+}
+
+.album-image {
+  width        : 400px;
+  height       : 400px;
+  margin-top   : 15px;
+  margin-bottom: 15px;
+}
+
+.content-right {
+  width       : 60%;
+  display     : block;
+  margin-right: 10%;
+  overflow    : auto;
+}
+
+.lyrics-line {
+  background-color: transparent;
+  border          : none;
+}

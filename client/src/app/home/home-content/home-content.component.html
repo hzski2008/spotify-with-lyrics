@@ -1,0 +1,28 @@
+<div class="full-width pane-body-right ">
+  <div class="full-width full-height container">
+    <div class="content-left">
+      <div class="content-left-header">
+        <span> <a (click)="openAlbumLink(track)" class="cursor-pointer">{{track | default: "album.name" }}</a> </span>
+        <span class="spacer"></span>
+      </div>
+      <img [src]="track | default: 'album.images[0].url'" class="mat-icon11"
+      class='album-image '
+       >
+      <div>
+        <mat-icon color="primary" mat-list-icon>
+          music_note
+        </mat-icon>
+        {{track | default: "name"}}
+      </div>
+      <div>
+        By
+        <span *ngFor="let artist of track.artists"> <a (click)="openArtistLink(artist)" class="cursor-pointer">
+            {{artist.name}}</a>,&nbsp; </span>
+      </div>
+      <div [hidden]="track && track.preview_url" class="blink"> Preview not available, please try another track </div>
+    </div>
+    <div class="content-right">
+      <pre class="lyrics-line">{{lyrics}}</pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="qc-folders-page qc-full-height qc-full-width">
+  <app-home-toolbar #homeToolbar></app-home-toolbar>
+  <div class="pull-left qc-full-height qc-folders-pane qc-folders-pane-left">
+    <div class="qc-full-width qc-folders-pane-body-left">
+      <div class="qc-full-width qc-full-height qc-folders-ej-control" id="playListTree">
+        <ejs-treeview id="treeElement" #playlistTree
+          [fields]="field"
+          [allowDragAndDrop]="false"
+          [fullRowSelect]="false"
+          [loadOnDemand]="false"
+          [enableHtmlSanitizer]="true"
+          [cssClass]="'qc-folders-tree'"
+          (nodeSelected)="selectTrack($event)"
+          >
+        </ejs-treeview>
+      </div>
+    </div>
+  </div>
+  <div class="pull-right qc-full-height qc-folders-pane qc-folders-pane-right">
+    <div qc-full-width qc-folders-pane-body-right>
+      <app-home-content [track]="selectedTrack" #homeContent>
+      </app-home-content>
+    </div>
+    <div>
+      <mat-toolbar class="content-footer">
+        <audio id='myAudioID' controls [src]="selectedTrack && selectedTrack.preview_url" style="width: 80%;"></audio>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>
