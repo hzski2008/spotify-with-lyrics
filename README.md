@@ -2,6 +2,8 @@
 
 This Angular+Node Express application shows user's playlists once he logs into his spotify account. When user selects a track from left-pane list, the track starts to play, and track details and lyrics are shown in the righ-side pane.
 
+<img src="demo.PNG" width="300" height="300"/>
+
 ## Installation
 
 1) git clone
