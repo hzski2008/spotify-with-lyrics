@@ -8,7 +8,7 @@ This Angular+Node.js+Express application shows user's playlists from his spotify
 
 1) Clone the project
 2) Go to your spotify dashboard page to register the application. After that, you will get client id and client secret for the registered app
-3) In your local repo, go to 'server' direcory and create '.env' file with the information you get at step 2
+3) In your local repo, go to 'server' directory and create '.env' file with the information you get at step 2
 ```
 REDIRECT_URI=[your_redirect_url]
 CLIENT_ID=[your client id]
