@@ -1,6 +1,6 @@
 # Spotify with lyrics
 
-This Angular+Node Express application shows user's playlists once he logs into his spotify account. When user selects a track from left-pane list, the track starts to play, and track details and lyrics are retrieved and shown in the righ-side pane.
+This Angular+Node.js+Express application shows user's playlists from his spotify account. When user selects a track from left-pane list, the track starts to play, and track details as well as lyrics are shown in the righ-side pane. The backend Node.js app is used to authenticate to Spotify and retrieve lyrics in the internet.
 
 <img src="demo.PNG" width="300" height="300"/>
 
